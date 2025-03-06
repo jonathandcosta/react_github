@@ -1,7 +1,8 @@
-import { Titulo as TituloEstilo} from './styles';
+import { ReactNode } from 'react';
+import { Titulo as TituloEstilo } from './styles';
 
 export type Props = {
-  children: string
+  children: ReactNode
   fontSize?: number
 }
 

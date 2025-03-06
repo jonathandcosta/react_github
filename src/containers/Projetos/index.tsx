@@ -9,6 +9,7 @@ interface Repositorio {
   name: string;
   description: string;
   html_url: string;
+  homepage: string;
 }
 
 
@@ -20,16 +21,20 @@ const Projetos = () => {
 
   useEffect(() => {
     const buscaRepositorio = async () => {
-      const response = await fetch('https://api.github.com/users/jonathandcosta/repos')
+      const response = await fetch('https://api.github.com/users/jonathandcosta/repos?per_page=100')
       const data = await response.json()
-      setRepositorio(data)
+
+      // Filtra apenas os repositórios que possuem uma descrição
+      const reposComEstrela = data.filter((repo: { stargazers_count: string | null }) => repo.stargazers_count);
+
+      setRepositorio(reposComEstrela)
     }
     buscaRepositorio()
   }, [])
 
   return (
     <section>
-      <Titulo fontSize={16}>Projetos</Titulo>
+      <Titulo fontSize={16}>Projetos ({repositorio.length.toString()})</Titulo>
       {
         repositorio.length > 0 ? (
           <Lista>
@@ -40,6 +45,7 @@ const Projetos = () => {
                   name={repo.name}
                   description={repo.description}
                   html_url={repo.html_url}
+                  homepage={repo.homepage}
                 />
 
               ))

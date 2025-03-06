@@ -1,11 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const Card = styled.div `
+export const Card = styled.div`
   border: 1px solid ${(props) => props.theme.corDaBorda};
   padding: 16px;
+  border-radius: 16px;
+  max-height: 250px;
+  max-width: 365px;
 `
 
-export const LinkBotao = styled.a `
+export const Butons = styled.div`
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+`
+
+export const LinkBotao = styled.a`
   font-size: 14px;
   color: ${(props) => props.theme.corDeFundo};
   background-color: ${(props) => props.theme.corDeFundoBotao};
@@ -14,4 +23,5 @@ export const LinkBotao = styled.a `
   display: inline-block;
   margin-top: 24px;
   cursor: pointer;
+  border-radius: 8px;
 `
