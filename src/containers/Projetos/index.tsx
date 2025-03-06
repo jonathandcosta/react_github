@@ -24,10 +24,15 @@ const Projetos = () => {
       const response = await fetch('https://api.github.com/users/jonathandcosta/repos?per_page=100')
       const data = await response.json()
 
-      // Filtra apenas os repositórios que possuem uma descrição
+      // Filtra apenas os repositórios que possuem pelo menos uma estrela
       const reposComEstrela = data.filter((repo: { stargazers_count: string | null }) => repo.stargazers_count);
 
-      setRepositorio(reposComEstrela)
+      // Ordena os repositórios por data de criação (created_at)  
+      const reposOrdenados = reposComEstrela.sort((a: { created_at: string }, b: { created_at: string }) => {
+        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      });
+
+      setRepositorio(reposOrdenados)
     }
     buscaRepositorio()
   }, [])

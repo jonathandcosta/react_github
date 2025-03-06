@@ -4,8 +4,9 @@ export const Card = styled.div`
   border: 1px solid ${(props) => props.theme.corDaBorda};
   padding: 16px;
   border-radius: 16px;
-  max-height: 250px;
-  max-width: 365px;
+  height: auto;
+  width: auto;
+  align-self: baseline;
 `
 
 export const Butons = styled.div`

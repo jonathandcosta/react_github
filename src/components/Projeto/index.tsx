@@ -16,7 +16,7 @@ const Projeto: React.FC<ProjetoProps> = ({ name, description, html_url, homepage
     <Titulo>{name}</Titulo>
     <Paragrafo tipo="secundario">{description}</Paragrafo>
     <Butons>
-      <LinkBotao href={html_url}>Visualizar</LinkBotao>
+      <LinkBotao target="_blank" href={html_url}>Visualizar</LinkBotao>
       <LinkBotao target="_blank" href={homepage}>Pagina</LinkBotao>
     </Butons>
   </Card>

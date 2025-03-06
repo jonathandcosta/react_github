@@ -3,8 +3,6 @@ import styled from 'styled-components'
 export const GithubSecao = styled.div`
   margin-top: 32px;
   margin-bottom: 64px;
-  display: flex;
-  gap: 20px;
 
   div {
     display: flex;
@@ -12,6 +10,7 @@ export const GithubSecao = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 
   img {
@@ -21,5 +20,8 @@ export const GithubSecao = styled.div`
       height: auto;
       width: 100%;
     }
+  }
+  @media (max-width: 768px) {
+    text-align-last: center;
   }
 `
