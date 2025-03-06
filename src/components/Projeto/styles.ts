@@ -13,6 +13,9 @@ export const Butons = styled.div`
   display: flex;
   justify-content: end;
   gap: 15px;
+
+  @media (max-width: 768px) {
+  }
 `
 
 export const LinkBotao = styled.a`
@@ -25,4 +28,14 @@ export const LinkBotao = styled.a`
   margin-top: 24px;
   cursor: pointer;
   border-radius: 8px;
+
+  &:hover {
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 `
