@@ -6,9 +6,7 @@ const Sobre = () => (
   <section>
     <Titulo fontSize={16}>Sobre mim</Titulo>
     <Paragrafo tipo="secundario">
-      Computer Science graduate and certified as a Frontend Engineer by EBAC - British School. I have expertise in problem-solving with technology, Project and team management, Data and performance analysis, Business Intelligence, Marketing and paid traffic analysis, and clear communication.
-
-      As a Frontend Developer since 2021, I have experience in responsive, semantic HTML5, with accessibility and SEO techniques, CSS3, Bootstrap, Tailwind, LESS, SASS, BEM, SCSS preprocessors, JavaScript, JQuery, ReactJS, Typescript, VueJS, React Native, Grunt, Gulp, Parcel, Ajax, Redux, Cypress, YUP, JEST build tools, Git version control tools, Github, API consumption, Agile methodologies, VTEX E-commerce platform, Winthor ERP - TOTVS;
+      Graduando em Ciência da Computação e certificado como Engenheiro Frontend pela EBAC - British School. Tenho expertise em resolução de problemas com tecnologia, gestão de projetos e equipes, análise de dados e desempenho, Business Intelligence, Marketing e análise de tráfego pago e comunicação clara. Como Desenvolvedor Frontend desde 2021, possuo experiência em HTML5 responsivo, semântico, com técnicas de acessibilidade e SEO, CSS3, Bootstrap, Tailwind, LESS, SASS, BEM, pré-processadores SCSS, JavaScript, JQuery, ReactJS, Typescript, VueJS, React Native, Grunt, Gulp, Parcel, Ajax, Redux, Cypress, YUP, ferramentas de build JEST, ferramentas de controle de versão Git, Github, consumo de APIs, metodologias ágeis, plataforma de E-commerce VTEX, Winthor ERP - TOTVS;
     </Paragrafo>
     <GithubSecao>
       <div>
